@@ -1,27 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://api.fontshare.com/css?f[]=supreme@300,301,400,401,500,501,700,701&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/index.css">
 
-  <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48x48.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="icon" type="image/svg+xml" href="assets/cinny.svg">
 
-  <title>Cinny | Site</title>
+  <title>Cinny | فارسی</title>
   <meta name="name"        content="Cinny">
   <meta name="author"      content="Ajay Bura">
-  <meta name="description" content="A Matrix client where you can enjoy the conversation using simple, elegant and secure interface protected by e2ee with the power of open source.">
-  <meta name="keywords"    content="cinny, cinnyapp, cinnychat, matrix, matrix client, matrix.org, element">
+  <meta name="description" content="یک کلاینت Matrix که در آن می‌توانید از مکالمات خود با رابطی ساده، زیبا و امن بهره ببرید؛ محافظت‌شده با رمزنگاری سرتاسری و قدرت متن‌باز.">
+  <meta name="keywords"    content="cinny, cinnyapp, matrix, matrix client, matrix.org, کلاینت متریکس, پیام‌رسان">
 
   <meta property="og:title"       content="Cinny">
-  <meta property="og:url"         content="https://cinny.in">
-  <meta property="og:image"       content="https://cinny.in/assets/favicon-48x48.png">
-  <meta property="og:description" content="A Matrix client where you can enjoy the conversation using simple, elegant and secure interface protected by e2ee with the power of open source.">
+  <meta property="og:url"         content="https://cinny.ir">
+  <meta property="og:image"       content="https://cinny.ir/assets/cinny.svg">
+  <meta property="og:description" content="یک کلاینت Matrix که در آن می‌توانید از مکالمات خود با رابطی ساده، زیبا و امن بهره ببرید؛ محافظت‌شده با رمزنگاری سرتاسری و قدرت متن‌باز.">
 </head>
 <body>
   <div id="root">
@@ -31,12 +28,12 @@
           <img src="assets/cinny.svg" alt="Cinny logo">
           <div>
             <h2 class="text-h2">Cinny</h2>
-            <p class="text-s1">Yet another matrix client</p>
+            <p class="text-s1">کلاینت ماتریکس با تمرکز بر رابط کاربری ساده</p>
           </div>
         </div>
         <div class="nav__options">
-          <a class="btn-primary" href="https://app.cinny.in">
-            <span class="text-b1">Login</span>
+          <a class="btn-primary" href="https://app.cinny.ir">
+            <span class="text-b1">ورود</span>
           </a>
         </div>
       </div>
@@ -45,14 +42,14 @@
       <div class="base-grid-12">
         <div class="hero__info">
           <div class="hero__intro">
-            <h1 class="text-h1">Imagine a <a href="https://matrix.org" target="_blank">Matrix</a> client...</h1>
-            <p class="text-b1">Where you can enjoy the conversation using <b style="color: var(--tc-surface-high)">simple, elegant and secure</b> interface protected by e2ee with the power of open source.</p>
+            <h1 class="text-h1">یک کلاینت <a href="https://matrix.org" target="_blank">Matrix</a> را تصور کنید...</h1>
+            <p class="text-b1">جایی که می‌توانید از مکالمات خود با رابطی <b style="color: var(--tc-surface-high)">ساده، زیبا و امن</b> بهره ببرید؛ محافظت‌شده با رمزنگاری سرتاسری و قدرت متن‌باز.</p>
             <div class="hero__intro__btns">
-              <a class="btn-primary btn-large" href="https://app.cinny.in">
-                <span class="text-s1">Open Cinny</span>
+              <a class="btn-primary btn-large" href="https://app.cinny.ir">
+                <span class="text-s1">ورود به برنامه</span>
               </a>
               <a class="btn-surface btn-large" href="#features">
-                <span class="text-s1">Learn more</span>
+                <span class="text-s1">اطلاعات بیشتر</span>
               </a>
             </div>
           </div>
@@ -60,15 +57,15 @@
         
         <div class="hero__preview">
           <div class="hero__preview__container">
-            <img id="previewImage" src="assets/preview-light.png" alt="Cinny preview image">
-            <p class="text-b3">Preview from chrome (desktop)</p>
+            <img id="previewImage" src="assets/preview-light.png" alt="پیش‌نمایش Cinny">
+            <p class="text-b3">پیش‌نمایش از مرورگر کروم (دسکتاپ)</p>
           </div>
         </div>
 
         <div class="hero__info">
           <div class="themes">
-            <h4 class="text-s1">Themes</h4>
-            <p id="themeStatus" class="text-b3">Selected: light</p>
+            <h4 class="text-s1">پوسته‌ها</h4>
+            <p id="themeStatus" class="text-b3">انتخاب شده: Light</p>
             <div class="themes__btn">
               <button onclick="changeTheme(this)" themeName="" class="theme-btn theme-btn--light theme-btn--active" />
               <button onclick="changeTheme(this)" themeName="silver-theme" class="theme-btn theme-btn--silver" />
@@ -83,8 +80,8 @@
     <section id="features" class="features">
       <div class="base-grid-12">
         <div class="features__info">
-          <h1 class="text-h1">Features</h1>
-          <p class="text-b1">You will have a pleasant experience because the overall look of Cinny is built using commonly used design patterns with micro enhancement.</p>
+          <h1 class="text-h1">امکانات</h1>
+          <p class="text-b1">تجربه‌ای لذت‌بخش خواهید داشت؛ ظاهر کلی Cinny با استفاده از الگوهای طراحی رایج و بهبودهای ظریف ساخته شده است.</p>
         </div>
       </div>
       <div class="features__list">
@@ -93,48 +90,48 @@
 
             <div class="feat-card">
               <div class="feat-card__preview">
-                <img class="feat-img" style="transform: translate(6%, 1%) rotate(15deg);" src="assets/preview-light.png" alt="cinny preview image">
+                <img class="feat-img" style="transform: translate(-6%, 1%) rotate(-15deg);" src="assets/preview-light.png" alt="cinny preview image">
               </div>
               <div class="feat-card__info">
-                <h2 class="text-h2">Organized</h2>
-                <p class="text-b1">Navigation is easy now because we organized DMs separate from channels.</p>
+                <h2 class="text-h2">منظم</h2>
+                <p class="text-b1">پیمایش حالا آسان‌تر شده چون پیام‌های خصوصی از کانال‌ها جدا سازمان‌دهی شده‌اند.</p>
               </div>
             </div>
 
             <div class="feat-card">
               <div class="feat-card__preview">
-                <img class="feat-img" style="transform: translate(2.8%, -34%);" src="assets/preview-light.png" alt="cinny preview image">
+                <img class="feat-img" style="transform: translate(-2.8%, -34%);" src="assets/preview-light.png" alt="cinny preview image">
               </div>
               <div class="feat-card__info">
-                <h2 class="text-h2">No more clutter</h2>
-                <p class="text-b1">You will see what's necessary to give you a better visual feedback.</p>
+                <h2 class="text-h2">بدون شلوغی</h2>
+                <p class="text-b1">فقط چیزهای ضروری را می‌بینید تا بازخورد بصری بهتری داشته باشید.</p>
               </div>
             </div>
 
             <div class="feat-card">
               <div class="feat-card__preview">
-                <img class="feat-img" style="transform: translate(-21%, -80%);" src="assets/preview-light.png" alt="cinny preview image">
+                <img class="feat-img" style="transform: translate(21%, -80%);" src="assets/preview-light.png" alt="cinny preview image">
               </div>
               <div class="feat-card__info">
-                <h2 class="text-h2">Input that matters</h2>
-                <p class="text-b1">An interface which adapts to your actions without making you feel uncomfortable.</p>
+                <h2 class="text-h2">ورودی با اهمیت</h2>
+                <p class="text-b1">رابطی که خودش را با کارهای شما تطبیق می‌دهد، بدون اینکه احساس ناراحتی کنید.</p>
               </div>
             </div>
 
             <div class="feat-card">
               <div class="feat-card__preview">
-                <img class="feat-img" style="transform: translate(-23%, 4%);" src="assets/preview-light.png" alt="cinny preview image">
+                <img class="feat-img" style="transform: translate(23%, 4%);" src="assets/preview-light.png" alt="cinny preview image">
               </div>
               <div class="feat-card__info">
-                <h2 class="text-h2">Calm visual</h2>
-                <p class="text-b1">Everything is properly aligned and formatted to give you a calm feeling.</p>
+                <h2 class="text-h2">ظاهر آرام</h2>
+                <p class="text-b1">همه چیز به‌درستی تراز و قالب‌بندی شده تا حس آرامشی به شما بدهد.</p>
               </div>
             </div>
             
             <div class="feat-card" style="text-align: center; display: flex; align-items: center;">
               <div class="feat-card__info">
-                <h2 class="text-h2">Lot more to come</h2>
-                <p class="text-b1">We are constantly working on Cinny to make it a better place. A place for communication like never seen before.</p>
+                <h2 class="text-h2">و خیلی بیشتر...</h2>
+                <p class="text-b1">ما دائماً روی Cinny کار می‌کنیم تا آن را به مکان بهتری تبدیل کنیم. مکانی برای ارتباط، آن‌گونه که تا به حال ندیده‌اید.</p>
               </div>
             </div>
 
@@ -149,12 +146,15 @@
       <div class="base-grid-12">
         <div class="about__info">
           <img src="assets/cinny.svg" alt="Cinny logo" />
-          <h1 class="text-h1">Cinny ❤ open source</h1>
-          <p class="text-b1">Cinny<sup><a title="It is named after The purple sunbird (Cinnyris asiaticus)." href="https://en.wikipedia.org/wiki/Purple_sunbird" target="_blank">[1]</a></sup> is built on top of <a href="https://matrix.org" target="_blank">Matrix</a> — An open network for secure, decentralized communication. We have also made the source code of Cinny open to everyone, so you can enhance, modify and inspect it.</p>
+          <h1 class="text-h1">Cinny عاشق متن‌باز است ❤</h1>
+          <p class="text-b1">سینی<sup><a title="نام آن از پرنده شکرخور بنفش (Cinnyris asiaticus) گرفته شده است." href="https://en.wikipedia.org/wiki/Purple_sunbird" target="_blank">[1]</a></sup> بر پایه <a href="https://matrix.org" target="_blank">ماتریکس</a> ساخته شده است — یک شبکه باز برای ارتباطات امن و غیرمتمرکز. کد منبع سینی نیز برای همه باز است تا بتوانید آن را بهبود دهید، تغییر دهید و بررسی کنید.</p>
 
           <div class="about__info__btns">
             <a class="btn-surface btn-large" href="https://github.com/ajbura/cinny" target="_blank">
-              <span class="text-b1">Source code</span>
+              <span class="text-b1">کد منبع Cinny</span>
+            </a>
+            <a class="btn-surface btn-large" href="https://github.com/erfnzdeh/cinny.ir" target="_blank" style="margin-top: var(--sp-tight);">
+              <span class="text-b1">کد منبع این سایت</span>
             </a>
           </div>
         </div>
@@ -164,8 +164,8 @@
     <section id="sponsor" class="support">
       <div class="base-grid-12">
         <div class="support__info">
-          <h1 class="text-h1">Financial contribution</h1>
-          <p class="text-b1">Support this project by becoming a financial contributor.</p>
+          <h1 class="text-h1">حمایت مالی</h1>
+          <p class="text-b1">با مشارکت مالی از این پروژه حمایت کنید.</p>
           <a class="btn-surface btn-large" href="https://opencollective.com/cinny" target="_blank">
             <span class="text-b1">Open Collective</span>
           </a>
@@ -175,12 +175,6 @@
           <a class="btn-surface btn-large" href="https://liberapay.com/ajbura/donate" target="_blank">
             <span class="text-b1">Liberapay</span>
           </a>
-        </div>
-        <div class="support__list">
-          <p class="support__label text-b2">Organizations</p>
-          <div id="supportOrg" class="support__container"></div>
-          <p class="support__label text-b2">Individuals</p>
-          <div id="supportInd" class="support__container"></div>
         </div>
       </div>
     </section>
@@ -192,12 +186,12 @@
             <img src="assets/cinny.svg" alt="Cinny logo">
             <div>
               <h2 class="text-h2">Cinny</h2>
-              <p class="text-s1">Yet another matrix client</p>
+              <p class="text-s1">کلاینت ماتریکس با تمرکز بر رابط کاربری ساده</p>
             </div>
           </div>
           <div class="footer__branding__options">
-            <a class="btn-primary" href="https://app.cinny.in">
-              <span class="text-b1">Get Started</span>
+            <a class="btn-primary" href="https://app.cinny.ir">
+              <span class="text-b1">شروع کنید</span>
             </a>
           </div>
         </div>
@@ -205,25 +199,24 @@
         <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px;">
           <div class="footer__menu">
             <div class="footer__menu-container">
-              <h4 class="text-b3">Menu</h4>
-              <a href="/" class="text-b2">Home</a>
-              <a href="#features" class="text-b2">Features</a>
-              <a href="#about" class="text-b2">About</a>
-              <a href="#sponsor" class="text-b2">Sponsor</a>
+              <h4 class="text-b3">منو</h4>
+              <a href="/" class="text-b2">خانه</a>
+              <a href="#features" class="text-b2">امکانات</a>
+              <a href="#about" class="text-b2">درباره</a>
+              <a href="#sponsor" class="text-b2">حمایت</a>
             </div>
             <div class="footer__menu-container">
-              <h4 class="text-b3">Community</h4>
-              <a class="text-b2" href="https://matrix.to/#/#cinny:matrix.org" target="_blank">Matrix (#cinny:matrix.org)</a>
-              <a class="text-b2" href="https://twitter.com/cinnyapp" target="_blank">Twitter</a>
-              <a class="text-b2" rel="me" href="https://fosstodon.org/@cinnyapp" target="_blank">Mastodon</a>
+              <h4 class="text-b3">جامعه</h4>
+              <a class="text-b2" href="https://matrix.to/#/#cinny:matrix.org" target="_blank">ماتریکس (#cinny:matrix.org)</a>
+              <a class="text-b2" href="https://twitter.com/cinnyapp" target="_blank">توییتر</a>
+              <a class="text-b2" rel="me" href="https://fosstodon.org/@cinnyapp" target="_blank">ماستودون</a>
             </div>
-          </div>
-          <div>
-            <a href="https://www.netlify.com"> <img src="https://www.netlify.com/v3/img/components/netlify-color-accent.svg" alt="Deploys by Netlify" /> </a>
           </div>
         </div>
 
-        <p class="footer__creator text-b3">Copyright © 2021 <a href="https://ajbura.github.io" target="_blank">Ajay Bura (ajbura)</a> • <a href="https://github.com/cinnyapp/cinny-site" target="_blank">Source code</a></p>
+        <p class="footer__disclaimer text-b3">This is a Persian clone of <a href="https://cinny.in" target="_blank">cinny.in</a>, hosted in Iran to ensure accessibility during internet disruptions.</p>
+        <p class="footer__creator text-b3">Copyright &copy; 2021 <a href="https://ajbura.github.io" target="_blank">Ajay Bura (ajbura)</a> &bull; <a href="https://github.com/cinnyapp/cinny-site" target="_blank">Source code</a></p>
+        <p class="footer__creator text-b3">Persian version by <a href="https://github.com/erfnzdeh" target="_blank">Pourya Erfanzadeh</a> &bull; <a href="https://github.com/erfnzdeh/cinny.ir" target="_blank">Source code</a></p>
       </div>
     </section>
   </div>

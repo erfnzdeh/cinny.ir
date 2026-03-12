@@ -19,8 +19,8 @@
   margin: 0 var(--sp-normal);
 }
 .branding-container > div .text-s1 {
-  padding-left: var(--sp-normal);
-  border-left: 1px solid var(--bg-surface-border);
+  padding-right: var(--sp-normal);
+  border-right: 1px solid var(--bg-surface-border);
 }
 
 /* --- grid --- */
