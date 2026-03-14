@@ -62,6 +62,38 @@ This project exists to make that discovery easier for non-technical users. A Per
 
 Static files served by nginx. No build step required. See the [original repository](https://github.com/cinnyapp/cinny-site) for upstream changes.
 
+### Analytics
+
+Basic visit metrics are publicly available at `/metrics`. They are generated from nginx access logs by [GoAccess](https://goaccess.io/) and refreshed every five minutes via cron. No JavaScript tracking, no cookies, no external services.
+
+**Setup:**
+
+1. Install GoAccess:
+   ```
+   apt install goaccess
+   ```
+
+2. Add a cron job (`crontab -e`):
+   ```
+   */5 * * * * goaccess /var/log/nginx/access.log -o /var/www/cinny.ir/metrics/index.html --log-format=COMBINED
+   ```
+   Adjust the log and output paths to match your server layout.
+
+3. Add an nginx location block inside the `cinny.ir` server config:
+   ```nginx
+   location /metrics {
+       alias /var/www/cinny.ir/metrics;
+       index index.html;
+   }
+   ```
+
+4. Reload nginx:
+   ```
+   systemctl reload nginx
+   ```
+
+The metrics page is intentionally public — there is no sensitive data in it, and transparency about traffic is consistent with the project's open-source ethos.
+
 ## Credits
 
 - Original project by [Ajay Bura (ajbura)](https://github.com/ajbura) - [cinnyapp/cinny-site](https://github.com/cinnyapp/cinny-site)
