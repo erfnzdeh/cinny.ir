@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="assets/cinny.svg">
+  <title>دانلود سینی | Cinny</title>
+  <link rel="stylesheet" href="css/base.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: var(--font-family);
+      background-color: var(--bg-surface-low);
+      color: var(--tc-surface-high);
+      direction: rtl;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .dl-header {
+      background-color: var(--bg-surface);
+      border-bottom: 1px solid var(--bg-surface-border);
+      padding: 16px 32px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .dl-header img { width: 32px; height: 32px; }
+    .dl-header a {
+      color: var(--tc-surface-high);
+      text-decoration: none;
+      font-size: var(--fs-h2);
+      font-weight: 600;
+    }
+    .dl-back {
+      margin-right: auto;
+      margin-left: 0;
+      font-size: var(--fs-b2);
+      color: var(--tc-link);
+      text-decoration: none;
+    }
+    .dl-container {
+      max-width: 720px;
+      width: 100%;
+      margin: 40px auto;
+      padding: 0 24px;
+      flex: 1;
+    }
+    .dl-title {
+      font-size: var(--fs-h1);
+      font-weight: 700;
+      margin: 0 0 8px;
+    }
+    .dl-version {
+      font-size: var(--fs-b2);
+      color: var(--tc-surface-low);
+      margin: 0 0 24px;
+    }
+
+    .assets-label {
+      direction: ltr;
+      text-align: left;
+      font-size: var(--fs-b2);
+      font-weight: 600;
+      color: var(--tc-surface-high);
+      margin: 0 0 8px;
+    }
+    .assets-card {
+      direction: ltr;
+      text-align: left;
+      background-color: var(--bg-surface);
+      border: 1px solid var(--bg-surface-border);
+      border-radius: var(--bo-radius);
+      overflow: hidden;
+    }
+    .asset-row {
+      display: flex;
+      align-items: center;
+      padding: 10px 16px;
+      gap: 10px;
+      border-bottom: 1px solid var(--bg-surface-border);
+      text-decoration: none;
+      color: inherit;
+      transition: background-color 0.1s;
+    }
+    .asset-row:last-child { border-bottom: none; }
+    .asset-row:hover { background-color: var(--bg-surface-hover); }
+
+    .asset-icon {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      fill: var(--tc-surface-low);
+    }
+    .asset-name {
+      flex: 1;
+      min-width: 0;
+      font-size: var(--fs-b2);
+      font-weight: 500;
+      color: var(--tc-link);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .asset-size {
+      flex-shrink: 0;
+      font-size: var(--fs-b3);
+      color: var(--tc-surface-low);
+      white-space: nowrap;
+    }
+
+    .dl-footer {
+      text-align: center;
+      padding: 24px;
+      font-size: var(--fs-b3);
+      color: var(--tc-surface-low);
+    }
+    .dl-footer a { color: var(--tc-link); }
+
+    @media (max-width: 600px) {
+      .dl-container { padding: 0 16px; margin: 24px auto; }
+      .asset-row { padding: 10px 12px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="dl-header">
+    <img src="assets/cinny.svg" alt="Cinny">
+    <a href="/">سینی</a>
+    <a class="dl-back" href="/">&larr; بازگشت</a>
+  </div>
+
+  <div class="dl-container">
+    <h1 class="dl-title">دانلود مستقیم</h1>
+    <p class="dl-version">نسخه ۴.۱۱.۲ — از <a href="https://github.com/cinnyapp/cinny-desktop/releases" target="_blank">مخزن رسمی</a></p>
+
+    <p class="assets-label">Assets</p>
+    <div class="assets-card" id="file-list">
+      <div class="asset-row" style="justify-content:center; color: var(--tc-surface-low); padding:24px;">در حال بارگذاری...</div>
+    </div>
+  </div>
+
+  <div class="dl-footer">
+    فایل‌ها مستقیماً از نسخه‌های رسمی <a href="https://github.com/cinnyapp/cinny-desktop" target="_blank">cinny-desktop</a> تهیه شده‌اند.
+  </div>
+
+  <script>
+    const FILES = [
+      { name: 'cinny-desktop-v4.11.2.zip',               size: '4.89 MB' },
+      { name: 'Cinny_desktop-universal.app.tar.gz',       size: '32.4 MB' },
+      { name: 'Cinny_desktop-universal.app.tar.gz.sig',   size: '404 Bytes' },
+      { name: 'Cinny_desktop-universal.dmg',              size: '32.3 MB' },
+      { name: 'Cinny_desktop-x86_64.AppImage',            size: '97.6 MB' },
+      { name: 'Cinny_desktop-x86_64.AppImage.tar.gz',     size: '96.9 MB' },
+      { name: 'Cinny_desktop-x86_64.AppImage.tar.gz.sig', size: '428 Bytes' },
+      { name: 'Cinny_desktop-x86_64.deb',                 size: '16.2 MB' },
+      { name: 'Cinny_desktop-x86_64.msi',                 size: '16.5 MB' },
+      { name: 'Cinny_desktop-x86_64.msi.zip',             size: '16.5 MB' },
+    ];
+
+    const ICON = `<svg class="asset-icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="m8.878.392 5.25 3.045c.54.314.872.89.872 1.514v6.098a1.75 1.75 0 0 1-.872 1.514l-5.25 3.045a1.75 1.75 0 0 1-1.756 0l-5.25-3.045A1.75 1.75 0 0 1 1 11.049V4.951c0-.624.332-1.201.872-1.514L7.122.392a1.75 1.75 0 0 1 1.756 0ZM7.875 1.69l-4.63 2.685L8 7.133l4.755-2.758-4.63-2.685a.248.248 0 0 0-.25 0ZM2.5 5.677v5.372c0 .09.047.171.125.216l4.625 2.683V8.432Zm6.25 8.271 4.625-2.683a.25.25 0 0 0 .125-.216V5.677L8.75 8.432Z"/></svg>`;
+
+    function render() {
+      const el = document.getElementById('file-list');
+      el.innerHTML = FILES.map(f =>
+        `<a class="asset-row" href="downloads/${f.name}" download>
+          ${ICON}
+          <span class="asset-name">${f.name}</span>
+          <span class="asset-size">${f.size}</span>
+        </a>`
+      ).join('');
+    }
+
+    render();
+  </script>
+</body>
+</html>
